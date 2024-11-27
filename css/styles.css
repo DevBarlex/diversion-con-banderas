@@ -1,10 +1,97 @@
+/* Estilos generales */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 h1 {
-  color: #333;
+  background-color: #4CAF50;
+  color: white;
+  margin: 0;
+  padding: 1em;
+}
+
+/* Lista de países */
+#countries-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em;
+}
+
+.country {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1em;
+  width: 150px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.country:hover {
+  transform: scale(1.05);
+  border-color: #4CAF50;
+}
+
+.flag {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+p {
+  margin: 0.5em 0;
+  font-weight: bold;
+}
+
+/* Modal para detalles del país */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 2em;
+  border-radius: 8px;
+  text-align: left;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+}
+
+.flag-large {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1em;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #999;
+}
+
+.close-btn:hover {
+  color: #000;
 }
